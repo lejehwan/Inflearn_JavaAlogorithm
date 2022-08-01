@@ -4,12 +4,14 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Num1 {
+public class Num2 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String str = br.readLine().toLowerCase();
-        String s = br.readLine().toLowerCase();
-        int answer = str.length() - str.replaceAll(s,"").length();
+        char[] str = br.readLine().toCharArray();
+        String answer = "";
+        for (int i = 0; i < str.length; i ++){
+            answer += (97 <= str[i] && str[i] <= 122) ? String.valueOf(str[i]).toUpperCase() : String.valueOf(str[i]).toLowerCase();
+        }
         System.out.println(answer);
         br.close();
     }
