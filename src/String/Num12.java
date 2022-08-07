@@ -7,7 +7,6 @@ import java.io.InputStreamReader;
 public class Num12 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int n = Integer.parseInt(br.readLine());
         String[] input = br.readLine().split("");
         int k = 0;
         String temp = "";
